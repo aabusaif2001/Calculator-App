@@ -12,6 +12,18 @@ function App() {
   const initialPreRetROR = Number(localStorage.getItem("preRetROR") || 7);
   const initialPostRetROR = Number(localStorage.getItem("postRetROR") || 7);
   const initialInflation = Number(localStorage.getItem("inflation") || 2.9);
+
+  const [retirementAge, setRetirementAge] = useState(initialRetirementAge);
+  const [targetRetAmt, setTargetRetAmt] = useState(initialTargetRetAmt);
+  const [annualRetExp, setAnnualRetExp] = useState(initialAnnualRetExp);
+  const [currentAge, setCurrentAge] = useState(initialCurrentAge);
+  const [currentSavings, setCurrentSavings] = useState(initialCurrentSavings);
+  const [contributions, setContributions] = useState(initialContributions);
+  const [contributionFreq, setContributionFreq] = useState(initialContributionFreq);
+  const [preRetROR, setInitialPreRetROR] = useState(initialPreRetROR);
+  const [postRetROR, setInitialPostRetROR] = useState(initialPostRetROR);
+  const [inflation, setInitialInflatione] = useState(initialInflation);
+  
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
