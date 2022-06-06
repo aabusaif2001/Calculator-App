@@ -23,6 +23,28 @@ function App() {
           Regular Contributions
           <input type="number"/>
         </label>
+        <label>
+          Contribution Frequency
+          <select>
+            <option value="Monthly">Monthly</option>
+            <option value="Annually">Annually</option>
+          </select>
+        </label>
+        <div>
+          <h2>Advanced</h2>
+          <label>
+            Pre-Retirement Rate of return
+            <input type="number"/>
+          </label>
+          <label>
+            Post-Retirement Rate of Return
+            <input type="number"/>
+          </label>
+          <label>
+            Inflation
+            <input type="number"/>
+          </label>
+        </div>
       </form>
     </div>
   );
