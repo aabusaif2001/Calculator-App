@@ -32,11 +32,11 @@ function App() {
       <form className='fire-calc-form'>
         <label>
           Annual Retirement Expenses (today's dollars)
-          <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value))}/>
+          <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value) || 0)} />
         </label>
         <label>
          Current Age           
-        <input type="number"/>
+        <input type="number" value={currentAge} onChange={(e)=> setCurrentAge(parseInt(e.target.value) || 0)}/>
         </label>
         <label>
           Current Savings Balance
