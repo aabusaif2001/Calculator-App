@@ -40,15 +40,16 @@ function App() {
         </label>
         <label>
           Current Savings Balance
-          <input type="number"/>
+          <input type="number" value={currentSavings} onChange={(e)=> setCurrentSavings(parseInt(e.target.value) || 0)}/>
         </label>
         <label>
           Regular Contributions
-          <input type="number"/>
+          <input type="number" value={contributions} onChange={(e)=> setContributions(parseInt(e.target.value) || 0)}/>
         </label>
         <label>
           Contribution Frequency
-          <select>
+          <select
+          value={contributionFreq} onChange={(e)=> setContributionFreq(e.target.value)}>
             <option value="Monthly">Monthly</option>
             <option value="Annually">Annually</option>
           </select>
@@ -57,15 +58,15 @@ function App() {
           <h2>Advanced</h2>
           <label>
             Pre-Retirement Rate of return
-            <input type="number"/>
+            <input type="number" value={preRetROR} onChange={(e)=> setPreRetROR(parseInt(e.target.value) || 0)}/>
           </label>
           <label>
             Post-Retirement Rate of Return
-            <input type="number"/>
+            <input type="number" value={postRetROR} onChange={(e)=> setPostRetROR(parseInt(e.target.value) || 0)}/>
           </label>
           <label>
             Inflation
-            <input type="number"/>
+            <input type="number" value={inflation} onChange={(e)=> setInflation(parseInt(e.target.value) || 0)}/>
           </label>
         </div>
       </form>
