@@ -27,12 +27,12 @@ function App() {
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
-      <h2>You can retire at age</h2>
-      <div>Target Retirement Amount: </div>
+      <h2>You can retire at age {retirementAge}</h2>
+      <div>Target Retirement Amount {targetRetAmt}</div>
       <form className='fire-calc-form'>
         <label>
           Annual Retirement Expenses (today's dollars)
-          <input type="number"/>
+          <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value))}/>
         </label>
         <label>
          Current Age           
