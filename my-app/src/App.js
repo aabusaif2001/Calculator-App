@@ -23,6 +23,20 @@ function App() {
   const [preRetROR, setInitialPreRetROR] = useState(initialPreRetROR);
   const [postRetROR, setInitialPostRetROR] = useState(initialPostRetROR);
   const [inflation, setInitialInflatione] = useState(initialInflation);
+
+
+  useEffect(() =>{
+    localStorage.setItem("retirementAge", retirementAge);
+    localStorage.setItem("targetRetAmt", targetRetAmt);
+    localStorage.setItem("annualRetExp", annualRetExp);
+    localStorage.setItem("currentAge", currentAge);
+    localStorage.setItem("currentSavings", currentSavings);
+    localStorage.setItem("contributions", contributions);
+    localStorage.setItem("contributionFreq", contributionFreq);
+    localStorage.setItem("preRetROR", preRetROR);
+    localStorage.setItem("postRetROR", postRetROR);
+    localStorage.setItem("inflation", inflation);
+});
   
   return (
     <div className="App">
