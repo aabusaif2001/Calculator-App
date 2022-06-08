@@ -20,9 +20,9 @@ function App() {
   const [currentSavings, setCurrentSavings] = useState(initialCurrentSavings);
   const [contributions, setContributions] = useState(initialContributions);
   const [contributionFreq, setContributionFreq] = useState(initialContributionFreq);
-  const [preRetROR, setInitialPreRetROR] = useState(initialPreRetROR);
-  const [postRetROR, setInitialPostRetROR] = useState(initialPostRetROR);
-  const [inflation, setInitialInflatione] = useState(initialInflation);
+  const [preRetROR, setPreRetROR] = useState(initialPreRetROR);
+  const [postRetROR, setPostRetROR] = useState(initialPostRetROR);
+  const [inflation, setInflation] = useState(initialInflation);
 
 
   const formatter = new Intl.NumberFormat("en-US", {
