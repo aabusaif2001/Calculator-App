@@ -59,7 +59,7 @@ function App() {
     <div className="App">
       <h1>Financial Independence Calculator</h1>
       <h2>You can retire at age {retirementAge}</h2>
-      <div>Target Retirement Amount {targetRetAmt}</div>
+      <div>Target Retirement Amount {formatter.format(targetRetAmt)}</div>
       <form className='fire-calc-form'>
         <label>
           Annual Retirement Expenses (today's dollars)
