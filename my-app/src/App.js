@@ -36,7 +36,7 @@ function App() {
     localStorage.setItem("preRetROR", preRetROR);
     localStorage.setItem("postRetROR", postRetROR);
     localStorage.setItem("inflation", inflation);
-});
+}, [annualRetExp, currentAge, currentSavings, contributions, contributionFreq, preRetROR, postRetROR, inflation]);
   
   return (
     <div className="App">
