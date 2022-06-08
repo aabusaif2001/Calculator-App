@@ -30,6 +30,23 @@ function App() {
     currency: "USD", 
     minimumFractionDigits: 2,
   });
+//calculation for annual compounding and contributions
+//in order to return the age you hit the target amount
+  const calcRetirementAge = (updatedTargetRetAmt) => {
+    const netPreRetROR = (preRetROR - inflation) / 100;
+    let currBal = currentSavings;
+    const annualCont = contributionFreq === "Annually" ? contributions : contributions * 12;
+    let retAge = currentAge;
+
+    while (currBal < updatedTargetRetAmt) {
+      currBal = annualCont + currBal * (1 + netPreRetROR);
+      retAge +=1;
+
+
+      if (retAge > 200) break;
+    }
+    return retAge;
+  };
 
   useEffect(() => {
     localStorage.setItem("retirementAge", retirementAge);
@@ -52,8 +69,19 @@ function App() {
     let updatedTargetRetAmt = annualRetExp / netPostRetROR;
     setTargetRetAmt(updatedTargetRetAmt);
 
+    const retAge = calcRetirementAge(updatedTargetRetAmt);
+    setRetirementAge(retAge);
 
-}, [annualRetExp, currentAge, currentSavings, contributions, contributionFreq, preRetROR, postRetROR, inflation]);
+}, [
+  annualRetExp, 
+  currentAge, 
+  currentSavings, 
+  contributions, 
+  contributionFreq, 
+  preRetROR, 
+  postRetROR, 
+  inflation
+]);
   
   return (
     <div className="App">
