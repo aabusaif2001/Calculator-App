@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useDebugValue } from "react";
 
 function App() {
   const initialRetirementAge = Number(localStorage.getItem("retirementAge") || 100);
@@ -25,7 +25,13 @@ function App() {
   const [inflation, setInitialInflatione] = useState(initialInflation);
 
 
-  useEffect(() =>{
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency", 
+    currency: "USD", 
+    minimumFractionDigits: 2,
+  });
+
+  useEffect(() => {
     localStorage.setItem("retirementAge", retirementAge);
     localStorage.setItem("targetRetAmt", targetRetAmt);
     localStorage.setItem("annualRetExp", annualRetExp);
@@ -36,6 +42,17 @@ function App() {
     localStorage.setItem("preRetROR", preRetROR);
     localStorage.setItem("postRetROR", postRetROR);
     localStorage.setItem("inflation", inflation);
+    //Calcuation based on if return on investments meet/exceed annual 
+    //retirement expenses wihtout having to earn additional income
+    // AnnualRetExp <= TargetRetAmt * NetRateOfReturn
+    // TargetRetAmt >= AnnualRetExp / NetRateOfReturn
+    let netPostRetROR = (postRetROR - inflation) / 100;
+    if (netPostRetROR === 0) netPostRetROR = 0.00001;
+
+    let updatedTargetRetAmt = annualRetExp / netPostRetROR;
+    setTargetRetAmt(updatedTargetRetAmt);
+
+
 }, [annualRetExp, currentAge, currentSavings, contributions, contributionFreq, preRetROR, postRetROR, inflation]);
   
   return (
