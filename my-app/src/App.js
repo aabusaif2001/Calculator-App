@@ -82,7 +82,7 @@ function App() {
   postRetROR, 
   inflation
 ]);
-  
+  //create new react components for styling
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
