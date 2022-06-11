@@ -83,6 +83,7 @@ function App() {
   inflation
 ]);
   //create new react components for styling
+  //styling needed and implememnt dark and light mode
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
