@@ -84,6 +84,7 @@ function App() {
 ]);
   //create new react components for styling
   //styling needed and implememnt dark and light mode
+  //find new ways to add
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
