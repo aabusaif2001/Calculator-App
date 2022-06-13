@@ -86,6 +86,7 @@ function App() {
   //styling needed and implememnt dark and light mode
   //find new ways to add
   //find new ways to a
+  //idk anymore
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
