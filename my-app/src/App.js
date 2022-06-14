@@ -87,6 +87,10 @@ function App() {
   //find new ways to add
   //find new ways to a
   //add new 
+  //function myFunction() {
+    //var element = document.body;
+    //element.classList.toggle("dark-mode");
+  //}
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
