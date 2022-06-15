@@ -91,6 +91,10 @@ function App() {
     //var element = document.body;
     //element.classList.toggle("dark-mode");
   //}
+  //function myFunction() {
+  //var element = document.body;
+  //element.classList.toggle("dark-mode");
+//}
   return (
     <div className="App">
       <h1>Financial Independence Calculator</h1>
