@@ -59,7 +59,7 @@ function App() {
     localStorage.setItem("preRetROR", preRetROR);
     localStorage.setItem("postRetROR", postRetROR);
     localStorage.setItem("inflation", inflation);
-    //Calcuation based on if return on investments meet/exceed annual 
+    //Calcuation based upon if return on investments meet/exceed annual 
     //retirement expenses wihtout having to earn additional income
     // AnnualRetExp <= TargetRetAmt * NetRateOfReturn
     // TargetRetAmt >= AnnualRetExp / NetRateOfReturn
