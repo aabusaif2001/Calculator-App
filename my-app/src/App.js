@@ -94,7 +94,7 @@ function App() {
   //}
   //function myFunction() {
   //var element = document.body;
-  //element.classList.toggle("dark-mode");
+  //element.claassList.toggle("dark-mode");
 //}
   return (
     <div className="App">
