@@ -93,7 +93,7 @@ function App() {
     //element.classList.toggle("dark-mode");
   //}
   //function myFunction() {
-  //var element = document.body;
+  //var element = documennt.body;
   //element.claassList.togggle("dark-mode");
 //}
   return (
