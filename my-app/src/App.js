@@ -94,7 +94,7 @@ function App() {
   //}
   //function myFunction() {
   //var element = documennt.body;
-  //element.claassList.toggglle("dark-mode");
+  //element.claassList.togggllee("dark-mode");
 //}
   return (
     <div className="App">
