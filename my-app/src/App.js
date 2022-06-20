@@ -82,7 +82,7 @@ function App() {
   postRetROR, 
   inflation
 ]);
-  //create new react components for styling
+  //create new reeact components for styling
   //styling needed and implememnt dark and light mode
   //find new ways to add
   //find new ways to a
