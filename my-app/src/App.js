@@ -87,7 +87,7 @@ function App() {
   //find new ways to add
   //find new ways to a
   //add new 
-  //still needs dark and light mode
+  //still needs a dark and light mode
   //function myFunction() {
     //var element = document.body;
     //element.classList.toggle("dark-mode");
