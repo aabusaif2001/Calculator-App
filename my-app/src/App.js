@@ -86,7 +86,7 @@ function App() {
   //styling needed and implememnt dark and light mode
   //find new ways to add
   //find new ways to a
-  //add new 
+  //add new a
   //still needs a dark and light mode
   //function myFunction() {
     //var element = document.body;
