@@ -102,6 +102,7 @@ function App() {
       <h2>You can retire at age {retirementAge}</h2>
       <div>Target Retirement Amount {formatter.format(targetRetAmt)}</div>
       <form className='fire-calc-form'>
+        <div className='basic'>
         <label>
           Annual Retirement Expenses (today's dollars)
           <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value) || 0)} />
@@ -126,8 +127,9 @@ function App() {
             <option value="Annually">Annually</option>
           </select>
         </label>
-        <div>
-          <h2>Advanced</h2>
+        </div>
+        <h2>Advanced</h2>
+        <div className='advanced'>
           <label>
             Pre-Retirement Rate of return
             <input type="number" value={preRetROR} onChange={(e)=> setPreRetROR(parseInt(e.target.value) || 0)}/>
