@@ -103,23 +103,23 @@ function App() {
       <div>Target Retirement Amount {formatter.format(targetRetAmt)}</div>
       <form className='fire-calc-form'>
         <div className='basic'>
-        <label>
+        <label className='label'>
           Annual Retirement Expenses (today's dollars)
           <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value) || 0)} />
         </label>
-        <label>
+        <label className='label'>
          Current Age           
         <input type="number" value={currentAge} onChange={(e)=> setCurrentAge(parseInt(e.target.value) || 0)}/>
         </label>
-        <label>
+                <label className='label'>
           Current Savings Balance
           <input type="number" value={currentSavings} onChange={(e)=> setCurrentSavings(parseInt(e.target.value) || 0)}/>
         </label>
-        <label>
+                <label className='label'>
           Regular Contributions
           <input type="number" value={contributions} onChange={(e)=> setContributions(parseInt(e.target.value) || 0)}/>
         </label>
-        <label>
+                <label className='label'>
           Contribution Frequency
           <select
           value={contributionFreq} onChange={(e)=> setContributionFreq(e.target.value)}>
@@ -128,20 +128,22 @@ function App() {
           </select>
         </label>
         </div>
+        <div className='advancedapp'>
         <h2>Advanced</h2>
         <div className='advanced'>
-          <label>
+                  <label className='label'>
             Pre-Retirement Rate of return
             <input type="number" value={preRetROR} onChange={(e)=> setPreRetROR(parseInt(e.target.value) || 0)}/>
           </label>
-          <label>
+                  <label className='label'>
             Post-Retirement Rate of Return
             <input type="number" value={postRetROR} onChange={(e)=> setPostRetROR(parseInt(e.target.value) || 0)}/>
           </label>
-          <label>
+                  <label className='label'>
             Inflation
             <input type="number" value={inflation} onChange={(e)=> setInflation(parseInt(e.target.value) || 0)}/>
           </label>
+          </div>
         </div>
       </form>
     </div>
