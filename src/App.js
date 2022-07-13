@@ -105,19 +105,19 @@ function App() {
         <div className='basic'>
         <label className='label'>
           Annual Retirement Expenses (today's dollars)
-          <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value) || 0)} />
+          <input type="number" value={annualRetExp} onChange={(e)=> setAnnualRetExp(parseInt(e.target.value) || null)} />
         </label>
         <label className='label'>
          Current Age           
-        <input type="number" style={{marginLeft:"15rem"}} value={currentAge} onChange={(e)=> setCurrentAge(parseInt(e.target.value) || 0)}/>
+        <input type="number" style={{marginLeft:"15rem"}} value={currentAge} onChange={(e)=> setCurrentAge(parseInt(e.target.value) || null)}/>
         </label>
                 <label className='label'>
           Current Savings Balance
-          <input type="number" style={{marginLeft:"9.4rem"}} value={currentSavings} onChange={(e)=> setCurrentSavings(parseInt(e.target.value) || 0)}/>
+          <input type="number" style={{marginLeft:"9.4rem"}} value={currentSavings} onChange={(e)=> setCurrentSavings(parseInt(e.target.value) || null)}/>
         </label>
                 <label className='label'>
           Regular Contributions
-          <input type="number" style={{marginLeft:"10.6rem"}} value={contributions} onChange={(e)=> setContributions(parseInt(e.target.value) || 0)}/>
+          <input type="number" style={{marginLeft:"10.6rem"}} value={contributions} onChange={(e)=> setContributions(parseInt(e.target.value) || null)}/>
         </label>
                 <label className='label'>
           Contribution Frequency
@@ -133,15 +133,15 @@ function App() {
         <div className='advanced'>
                   <label className='label'>
             Pre-Retirement Rate of Return
-            <input type="number" style={{marginLeft:"6.1rem"}} value={preRetROR} onChange={(e)=> setPreRetROR(parseInt(e.target.value) || 0)}/>
+            <input type="number" style={{marginLeft:"6.1rem"}} value={preRetROR} onChange={(e)=> setPreRetROR(parseInt(e.target.value) || null)}/>
           </label>
                   <label className='label'>
             Post-Retirement Rate of Return
-            <input type="number" style={{marginLeft:"5.6rem"}} value={postRetROR} onChange={(e)=> setPostRetROR(parseInt(e.target.value) || 0)}/>
+            <input type="number" style={{marginLeft:"5.6rem"}} value={postRetROR} onChange={(e)=> setPostRetROR(parseInt(e.target.value) || null)}/>
           </label>
                   <label className='label'>
             Inflation
-            <input type="number" style={{marginLeft:"16.15rem"}} value={inflation} onChange={(e)=> setInflation(parseInt(e.target.value) || 0)}/>
+            <input type="number" style={{marginLeft:"16.15rem"}} value={inflation} onChange={(e)=> setInflation(parseInt(e.target.value) || null)}/>
           </label>
           </div>
         </div>
